@@ -14,7 +14,7 @@ type CardProps = {
 
 export const Card = ({ title, children, actions }: CardProps) => {
   return (
-    <section className="bg-blue-200 p-5">
+    <section className="bg-blue-200 p-5 w-[70%] flex flex-col justify-center items-center gap-2 rounded-xl">
       <h2>{title}</h2>
       {children}
       {actions}
@@ -28,7 +28,10 @@ export const Demo = () => {
     <Card
       title="My Card"
       actions={
-        <button onClick={() => console.log("Button clicked!")}>
+        <button
+          className="bg-red-200 px-8 py-2 rounded-md text-gray-800 hover:shadow-lg"
+          onClick={() => console.log("Button clicked!")}
+        >
           Click Me!
         </button>
       }

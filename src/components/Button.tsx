@@ -15,10 +15,20 @@ const isAnchorProps = (
 
 const Button = (props: ButtonProps | AnchorProps) => {
   if (isAnchorProps(props)) {
-    return <a {...props}></a>;
+    return (
+      <a
+        {...props}
+        className="bg-green-200 px-8 py-2.5 rounded-md text-gray-800 hover:shadow-lg"
+      ></a>
+    );
   }
 
-  return <button {...props}></button>;
+  return (
+    <button
+      {...props}
+      className="bg-red-200 px-8 py-2 rounded-md text-gray-800 hover:shadow-lg"
+    ></button>
+  );
 };
 
 export default Button;
